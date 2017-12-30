@@ -47126,7 +47126,7 @@ function initPoints() {
     v: {value: 1 / windowHalfY}
   })
   var effectFXAA = new __WEBPACK_IMPORTED_MODULE_0_three__["ShaderPass"](new __WEBPACK_IMPORTED_MODULE_0_three__["ShaderMaterial"](__WEBPACK_IMPORTED_MODULE_0_three__["FXAAShader"]()))
-  effectFXAA.material.uniforms['resolution'].value.set(0.5 / windowHalfX, 0.5 / windowHalfY)
+  effectFXAA.material.uniforms['resolution'].value.set(0.5 / windowHalfX / window.devicePixelRatio, 0.5 / windowHalfY / window.devicePixelRatio)
   var effectCopy = new __WEBPACK_IMPORTED_MODULE_0_three__["ShaderPass"](new __WEBPACK_IMPORTED_MODULE_0_three__["ShaderMaterial"](__WEBPACK_IMPORTED_MODULE_0_three__["CopyShader"]()))
   effectCopy.renderToScreen = true
 
