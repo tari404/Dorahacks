@@ -3,3 +3,5 @@
 /package.json
 /package-lock.json
 /webpack.config.js
+.DS_Store
+.babelrc
