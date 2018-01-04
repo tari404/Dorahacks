@@ -3,6 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
+  <style>
+    #mask {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      width: 100vw;
+      height: 100vh;
+      background-color: #000;
+      color: #F26F21;
+      text-align: center;
+      line-height: 100vh;
+      font-family: 'PingFang SC', 'Microsoft YaHei';
+    }
+    .animate {
+      animation: fadeIn 2s;
+      -moz-animation: fadeIn 2s;
+      -webkit-animation: fadeIn 2s;
+      -o-animation: fadeIn 2s;
+    }
+
+    @keyframes fadeIn
+    {
+      0%   {opacity: 0}
+      50%   {opacity: 0}
+      100% {opacity: 1}
+    }
+
+    @-moz-keyframes fadeIn
+    {
+      0%   {opacity: 0}
+      50%   {opacity: 0}
+      100% {opacity: 1}
+    }
+
+    @-webkit-keyframes fadeIn
+    {
+      0%   {opacity: 0}
+      50%   {opacity: 0}
+      100% {opacity: 1}
+    }
+
+    @-o-keyframes fadeIn
+    {
+      0%   {opacity: 0}
+      50%   {opacity: 0}
+      100% {opacity: 1}
+    }
+  </style>
 </head>
 <body>
   <canvas id="myCanvas"></canvas>
@@ -30,8 +79,13 @@
     </g>
   </svg>
   <div id="main-content">
-<!--     DoraHacks is a global hackathon organizer and hacker organization founded in 2014, with support from Open Wisdom Lab at Tsinghua University. -->
+    <p></p>
+    <p class="buttons">
+      <span id="prev" class="button">PREV</span>
+      <span id="next" class="button">NEXT</span>
+    </p>
   </div>
+  <div id="mask"><span class="animate">loading</span></div>
 </body>
 <script src="./dist/main.js"></script>
 </html>
